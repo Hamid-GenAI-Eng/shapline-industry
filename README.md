@@ -1,6 +1,23 @@
+<div align="center">
+
 # Shapline Industry
 
-A modern, full-stack industrial web application built with **TanStack Start**, **React 19**, and **TypeScript** — featuring a component-driven UI, real-time Firestore backend, and serverless Cloudflare Workers compute. Deployed on Vercel.
+**TanStack Start · React 19 · Firebase · Cloudflare Workers**
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-shapline--industry.vercel.app-black?style=flat-square&logo=vercel)](https://shapline-industry.vercel.app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-97.8%25-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Firebase](https://img.shields.io/badge/Database-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Cloudflare Workers](https://img.shields.io/badge/Backend-Cloudflare%20Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
+
+</div>
+
+---
+
+## Overview
+
+Shapline Industry is a full-stack web application built on the cutting edge of the React ecosystem — **React 19**, **TanStack Start**, and **TanStack Router** for file-based routing, **Firebase Firestore** for real-time data, and **Cloudflare Workers** for serverless edge compute. The UI is powered by Shadcn/ui with Tailwind CSS 4, delivering a fast, type-safe, production-ready experience.
 
 🌐 **Live:** [shapline-industry.vercel.app](https://shapline-industry.vercel.app)
 
@@ -10,88 +27,20 @@ A modern, full-stack industrial web application built with **TanStack Start**, *
 
 | Layer | Technology |
 |---|---|
-| **Framework** | TanStack Start + React 19.2.0 |
-| **Language** | TypeScript 5.x |
-| **Router** | TanStack React Router 1.168.0 |
-| **State / Data** | TanStack Query 5.83.0 |
-| **Styling** | Tailwind CSS 4.2.1 |
-| **UI Components** | shadcn/ui (Radix UI) |
-| **Forms** | React Hook Form + Zod |
-| **Charts** | Recharts |
-| **Database** | Firebase Firestore |
-| **Serverless** | Cloudflare Workers (Wrangler) |
-| **Build Tool** | Vite 7.3.1 |
+| **Framework** | TanStack Start 1.167 |
+| **Language** | TypeScript (97.8%) |
+| **UI Library** | React 19.2 |
+| **Router** | TanStack React Router 1.168 |
+| **Styling** | Tailwind CSS 4.2 |
+| **UI Components** | Shadcn/ui · 20+ Radix UI primitives |
+| **Forms** | React Hook Form 7 + Zod 3.24 |
+| **Data Fetching** | TanStack React Query v5 |
+| **Charts** | Recharts 2.15 |
+| **Database** | Firebase 12 (Firestore) |
+| **Backend** | Cloudflare Workers (via Wrangler) |
+| **Build Tool** | Vite 7.3 |
 | **Package Manager** | Bun |
 | **Deployment** | Vercel |
-
----
-
-## Features
-
-- **Type-safe routing** via TanStack Router with file-based route definitions
-- **Server-side rendering** support through TanStack Start
-- **Real-time data** with Firebase Firestore integration
-- **Edge compute** via Cloudflare Workers for low-latency serverless logic
-- **Rich component library** — 20+ Radix UI primitives, carousels, resizable panels, toast notifications
-- **Form validation** with React Hook Form + Zod schema validation
-- **Data visualization** with Recharts
-- **Code quality** enforced via ESLint + Prettier
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- [Bun](https://bun.sh) >= 1.x
-- [Node.js](https://nodejs.org) >= 20.x (for tooling compatibility)
-- A Firebase project with Firestore enabled
-- A Cloudflare account (for Workers deployment)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Hamid-GenAI-Eng/shapline-industry.git
-cd shapline-industry
-
-# Install dependencies
-bun install
-```
-
-### Environment Setup
-
-Create a `.env` file in the root directory and add your Firebase configuration:
-
-```env
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-```
-
-### Development
-
-```bash
-bun run dev
-```
-
-The app will be available at `http://localhost:3000`.
-
----
-
-## Scripts
-
-| Command | Description |
-|---|---|
-| `bun run dev` | Start development server |
-| `bun run build` | Production build (type-check + Vite) |
-| `bun run build:dev` | Development mode build |
-| `bun run preview` | Preview production build locally |
-| `bun run lint` | Run ESLint |
-| `bun run format` | Format code with Prettier |
 
 ---
 
@@ -100,88 +49,128 @@ The app will be available at `http://localhost:3000`.
 ```
 shapline-industry/
 ├── src/                    # Application source code
-│   ├── components/         # Reusable UI components (shadcn/ui + custom)
 │   ├── routes/             # TanStack Router file-based routes
-│   ├── lib/                # Utilities, Firebase config, helpers
-│   └── ...
+│   ├── components/         # Reusable UI components (Shadcn/ui)
+│   └── lib/                # Utilities, Firebase config, helpers
 ├── .vite/                  # Vite cache
-├── vite.config.ts          # Vite bundler configuration
+├── vite.config.ts          # Vite + TanStack Start configuration
 ├── tsconfig.json           # TypeScript configuration
 ├── eslint.config.js        # ESLint rules
-├── .prettierrc             # Prettier formatting rules
-├── components.json         # shadcn/ui components metadata
-├── firebase.json           # Firebase project configuration
+├── .prettierrc             # Prettier formatting config
+├── components.json         # Shadcn/ui metadata
+├── firebase.json           # Firebase project config
 ├── firestore.rules         # Firestore security rules
-├── wrangler.jsonc          # Cloudflare Workers configuration
-└── bunfig.toml             # Bun configuration
+├── wrangler.jsonc          # Cloudflare Workers config
+├── bunfig.toml             # Bun config
+└── package.json
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (primary package manager)
+- Node.js 18+
+- Firebase project with Firestore enabled
+- Cloudflare account (for Workers)
+
+### Installation
+
+```bash
+git clone https://github.com/Hamid-GenAI-Eng/shapline-industry.git
+cd shapline-industry
+bun install
+```
+
+### Environment Setup
+
+Create a `.env` file in the root:
+
+```env
+VITE_FIREBASE_API_KEY=your-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+VITE_FIREBASE_APP_ID=your-app-id
+```
+
+### Run Locally
+
+```bash
+bun run dev
+```
+
+Opens at `http://localhost:3000`
+
+---
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `bun run dev` | Start development server |
+| `bun run build` | TypeScript check + production build |
+| `bun run build:dev` | Dev-mode build |
+| `bun run preview` | Preview production build locally |
+| `bun run lint` | Run ESLint |
+| `bun run format` | Format code with Prettier |
+
+---
+
+## Firebase & Cloudflare Setup
+
+### Firestore
+
+```bash
+# Install Firebase CLI
+npm i -g firebase-tools
+
+# Login & initialize
+firebase login
+firebase init firestore
+
+# Deploy security rules
+firebase deploy --only firestore:rules
+```
+
+### Cloudflare Workers
+
+```bash
+# Install Wrangler CLI
+npm i -g wrangler
+
+# Login
+wrangler login
+
+# Run Workers locally
+wrangler dev
+
+# Deploy Workers
+wrangler deploy
 ```
 
 ---
 
 ## Deployment
 
-### Vercel (Frontend)
-
-The app is configured for Vercel deployment. Push to `main` to trigger automatic deployments.
+Frontend is deployed on **Vercel** with automatic CI/CD. Cloudflare Workers handle edge serverless functions independently via Wrangler.
 
 ```bash
-# Manual deploy via Vercel CLI
+# Deploy frontend
 vercel --prod
-```
 
-### Cloudflare Workers (Backend)
-
-```bash
-# Deploy Workers via Wrangler
-bunx wrangler deploy
-```
-
-### Firestore Rules
-
-Deploy Firestore security rules:
-
-```bash
-firebase deploy --only firestore:rules
+# Deploy Workers
+wrangler deploy
 ```
 
 ---
 
-## Key Dependencies
+## Built By
 
-```json
-{
-  "react": "19.2.0",
-  "@tanstack/react-start": "1.167.14",
-  "@tanstack/react-router": "1.168.0",
-  "@tanstack/react-query": "5.83.0",
-  "tailwindcss": "4.2.1",
-  "firebase": "12.12.1",
-  "react-hook-form": "7.71.2",
-  "zod": "3.24.2",
-  "recharts": "2.15.4",
-  "date-fns": "4.1.0"
-}
-```
+**Hamid Saifullah** — Tech Lead at [Code Envision Technologies](https://github.com/Hamid-GenAI-Eng)
 
----
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'feat: add your feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a Pull Request
-
----
-
-## Author
-
-**Hamid Saifullah** — Tech Lead at [Code Envision Technologies](https://codeenvisiontechnologies.com)
-
-- GitHub: [@Hamid-GenAI-Eng](https://github.com/Hamid-GenAI-Eng)
-- Portfolio: [hamid-saifullah-portfolio-nexus.vercel.app](https://hamid-saifullah-portfolio-nexus.vercel.app)
-
----
-
-*Built with TanStack Start · Powered by Firebase & Cloudflare · Deployed on Vercel*
+[![GitHub](https://img.shields.io/badge/GitHub-Hamid--GenAI--Eng-181717?style=flat-square&logo=github)](https://codeenvisiontechnologies.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-hamid--saifullah-black?style=flat-square&logo=vercel)](https://hamid-saifullah-portfolio-nexus.vercel.app)
